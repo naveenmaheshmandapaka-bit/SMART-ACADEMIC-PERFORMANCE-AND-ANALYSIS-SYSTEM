@@ -1,10 +1,14 @@
-class Student:
-    def __init__(self, name, marks):
+class Person:
+    def __init__(self, name):
         self.name = name
+
+class Student(Person):
+    def __init__(self, name, marks):
+        super().__init__(name)
         self.marks = marks
 
     def display(self):
         print(self.name, self.marks)
 
-s1 = Student("Ram", 80)
-s1.display()
+s = Student("Ram", 80)
+s.display()
